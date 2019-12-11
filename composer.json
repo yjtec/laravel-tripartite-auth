@@ -1,0 +1,31 @@
+{
+    "name": "yjtec/laravel-tripartite-auth",
+    "description": "第三方授权",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "playhan",
+            "email": "2824643212@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yjtec/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yjtec\\LaravelTripartiteAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yjtec\\LaravelTripartiteAuth\\TripartiteAuthServiceProvider"
+            ],
+            "aliases": {
+                "TripartiteAuth": "Yjtec\\LaravelTripartiteAuth\\Facade"
+            }
+        }
+    }
+}
