@@ -1,6 +1,4 @@
 <?php
-
-
 namespace Yjtec\LaravelTripartiteAuth;
 
 class Exception

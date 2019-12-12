@@ -52,7 +52,7 @@ class WeChatOpenPlatform extends ServiceProvider
         }
 
         if (empty($token['openid']) || empty($token['access_token'])) {
-            self::setMessage("缺少参数 openid 或 AccessToken");
+            self::setMessage("openid of AccessToken is required");//缺少参数 openid 或 AccessToken
         }
         $path_data = [
             'access_token' => $token['access_token'],
@@ -80,7 +80,6 @@ class WeChatOpenPlatform extends ServiceProvider
             'code' => $code,
             'grant_type' => 'authorization_code',
         ]);
-
         return $str ? $this->getImplodeKeyByValue($data) : $data;
     }
 

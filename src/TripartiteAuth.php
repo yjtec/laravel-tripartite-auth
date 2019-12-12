@@ -3,6 +3,7 @@
 
 namespace Yjtec\LaravelTripartiteAuth;
 
+use Yjtec\LaravelTripartiteAuth\Exception;
 
 class TripartiteAuth extends Exception
 {
@@ -14,7 +15,7 @@ class TripartiteAuth extends Exception
         return self::make($name, $config);
     }
 
-    public static function make($name, array $config)
+    public static function make(string $name, array $config)
     {
         $application = "\\Yjtec\\LaravelTripartiteAuth\\Providers\\{$name}";
         return new $application($config);
@@ -31,7 +32,7 @@ class TripartiteAuth extends Exception
     {
         $config = empty($config) ? config("tripartite_auth.{$name}") : config("tripartite_auth.{$config[0]}");
         if (!$config) {
-            self::setMessage('没有查询到配置文件');
+            self::setMessage('No configuration file found');//没有查询到配置文件
         }
         return $config;
     }

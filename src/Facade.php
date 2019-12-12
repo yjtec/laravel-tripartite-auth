@@ -8,7 +8,7 @@ use \Illuminate\Support\Facades\Facade as LaravelFacade;
 /**
  * Class Facade
  * @package LaravelTripartiteAuth
- * @see \Yjtec\LaravelTripartiteAuth\TripartiteAuth
+ * @method static \Yjtec\LaravelTripartiteAuth\Providers\WeChatOpenPlatform WeChatOpenPlatform(array $config = [])
  */
 class Facade extends LaravelFacade
 {
